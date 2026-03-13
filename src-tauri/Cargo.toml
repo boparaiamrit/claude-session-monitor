@@ -1,0 +1,27 @@
+[package]
+name = "claude-session-monitor"
+version = "1.0.0"
+description = "A beautiful desktop app to monitor your Claude Code sessions in real-time"
+authors = ["Amritpal Singh"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-shell = "2"
+tauri-plugin-window-state = "2"
+tauri-plugin-single-instance = "2"
+tauri-plugin-autostart = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+glob = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "6"
+notify = "8"
+tokio = { version = "1", features = ["full"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

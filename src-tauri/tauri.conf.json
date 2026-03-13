@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicbarker/tauri/tauri-v2/crates/tauri-utils/schema.json",
+  "productName": "Claude Session Monitor",
+  "version": "1.0.0",
+  "identifier": "com.boparaiamrit.claude-session-monitor",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset:; connect-src 'self' ipc: http://ipc.localhost"
+    },
+    "windows": [
+      {
+        "title": "Claude Session Monitor",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": false,
+        "decorations": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {}
+}

@@ -1,0 +1,12 @@
+{
+  "identifier": "main-capability",
+  "description": "Main window permissions",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:event:allow-emit",
+    "core:event:allow-listen",
+    "shell:allow-open"
+  ]
+}
