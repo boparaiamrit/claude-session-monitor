@@ -21,8 +21,14 @@ Tracked, visualized, and displayed in a beautiful Office Cabin metaphor.
 
 </div>
 
+### Office View
 <p align="center">
   <img src="screenshot.png" alt="Claude Session Monitor — Office View" width="100%" />
+</p>
+
+### Classic View
+<p align="center">
+  <img src="screenshot-classic.png" alt="Claude Session Monitor — Classic View" width="100%" />
 </p>
 
 ---
