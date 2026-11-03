@@ -1,7 +1,7 @@
 [package]
 name = "claude-session-monitor"
-version = "1.0.0"
-description = "A beautiful desktop app to monitor your Claude Code sessions in real-time"
+version = "2.0.0"
+description = "Watch and control every Claude Code session: 3D office, mission control, approvals and live steering"
 authors = ["Amritpal Singh"]
 edition = "2021"
 
@@ -14,13 +14,25 @@ tauri-plugin-shell = "2"
 tauri-plugin-window-state = "2"
 tauri-plugin-single-instance = "2"
 tauri-plugin-autostart = "2"
+tauri-plugin-notification = "2"
 serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+# preserve_order keeps the user's settings.json key order when hooks are added or removed
+serde_json = { version = "1", features = ["preserve_order"] }
 glob = "0.3"
 chrono = { version = "0.4", features = ["serde"] }
 dirs = "6"
 notify = "8"
 tokio = { version = "1", features = ["full"] }
+sysinfo = "0.40"
+tiny_http = "0.12"
+uuid = { version = "1", features = ["v4"] }
+
+# Transcripts can total hundreds of MB; unoptimized JSON parsing is ~20x slower
+[profile.dev]
+opt-level = 3
+
+[profile.dev.package."*"]
+opt-level = 3
 
 [features]
 default = ["custom-protocol"]
