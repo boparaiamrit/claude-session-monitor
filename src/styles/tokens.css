@@ -1,0 +1,100 @@
+/* Design tokens. Every spacing, size, color and motion value in the app comes from here. */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces: cool near-black, each step a little lighter */
+  --bg-0: #07080b;
+  --bg-1: #0b0d12;
+  --bg-2: #10131a;
+  --bg-3: #161a23;
+  --bg-4: #1d222d;
+  --glass: rgba(13, 15, 21, 0.78);
+  --glass-strong: rgba(11, 13, 18, 0.92);
+  --line: rgba(255, 255, 255, 0.07);
+  --line-2: rgba(255, 255, 255, 0.12);
+  --line-3: rgba(255, 255, 255, 0.2);
+
+  /* Text: warm white with three quieter steps */
+  --fg: #ebe8e1;
+  --fg-2: #b4b7c2;
+  --fg-3: #7d8292;
+  --fg-4: #545a69;
+
+  /* One accent: "working right now". Status colors always pair with a label. */
+  --live: #ff9254;
+  --live-soft: rgba(255, 146, 84, 0.14);
+  --live-line: rgba(255, 146, 84, 0.38);
+  --blocked: #ff4d6d;
+  --blocked-soft: rgba(255, 77, 109, 0.14);
+  --blocked-line: rgba(255, 77, 109, 0.4);
+  --waiting: #7c9cff;
+  --waiting-soft: rgba(124, 156, 255, 0.13);
+  --idle: #5d6475;
+  --idle-soft: rgba(93, 100, 117, 0.16);
+  --ok: #3ddc97;
+  --ok-soft: rgba(61, 220, 151, 0.13);
+  --warn: #f5c451;
+  --brand: #d97757;
+
+  /* Tool palette (mirrors lib/theme.ts) */
+  --tool-read: #60a5fa;
+  --tool-edit: #a78bfa;
+  --tool-write: #f472b6;
+  --tool-run: #34d399;
+  --tool-grep: #22d3ee;
+  --tool-glob: #fbbf24;
+  --tool-agent: #fb923c;
+  --tool-web: #2dd4bf;
+  --tool-plan: #f87171;
+  --tool-mcp: #818cf8;
+  --tool-other: #94a3b8;
+
+  /* Spacing scale */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+
+  /* Type scale */
+  --t-12: 12px;
+  --t-13: 13px;
+  --t-14: 14px;
+  --t-16: 16px;
+  --t-18: 18px;
+  --t-20: 20px;
+  --t-24: 24px;
+  --t-30: 30px;
+  --t-36: 36px;
+  --t-48: 48px;
+  --font: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+
+  --r1: 6px;
+  --r2: 10px;
+  --r3: 14px;
+  --r4: 20px;
+
+  /* Two-layer shadows: near + far */
+  --sh-1: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 8px rgba(0, 0, 0, 0.18);
+  --sh-2: 0 2px 6px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.32);
+  --sh-3: 0 4px 12px rgba(0, 0, 0, 0.4), 0 24px 64px rgba(0, 0, 0, 0.5);
+
+  /* Motion (claude-motion / bang-motion numbers) */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.6, 0, 0.9, 0.35);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-land: cubic-bezier(0.55, 0, 0.2, 1.12);
+  --d-1: 150ms;
+  --d-2: 240ms;
+  --d-3: 420ms;
+  --d-4: 700ms;
+
+  --topbar-h: 56px;
+  --rail-w: 64px;
+  --status-h: 30px;
+  --drawer-w: 460px;
+}

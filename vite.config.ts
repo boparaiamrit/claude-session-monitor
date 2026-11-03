@@ -14,5 +14,7 @@ export default defineConfig({
     target: 'esnext',
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
     sourcemap: !!process.env.TAURI_DEBUG,
+    // Desktop app loading from disk; the 3D kit chunk (~300 KB gzip) loads only with 3D views
+    chunkSizeWarningLimit: 1200,
   },
 })

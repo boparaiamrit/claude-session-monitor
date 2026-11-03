@@ -31,3 +31,6 @@ src-tauri/Cargo.lock
 # OS
 Thumbs.db
 package-lock.json
+
+# Real-session snapshots for ?replay= (contain transcript content; never commit)
+public/__replay.json
